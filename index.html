@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>animaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-image: url('hola.gif'); 
+            background-size: cover; 
+            background-attachment: fixed;
+            font-family: 'Quicksand', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
+            color: #25201C; 
+        }
+        .web-container { 
+            background: #FDFAFA; 
+            width: 650px; padding: 20px; border-radius: 20px; 
+            border: 2px solid #FEECF8; 
+            box-shadow: 0 4px 15px rgba(37, 32, 28, 0.1); 
+            animation: growIn 1.5s ease-out; 
+        }
+        .search-bar { background: #F2E4F2; padding: 10px; border-radius: 15px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; color: #25201C; }
+        .banner { background: #FEECF8; color: #25201C; padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: left; }
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .box { border: 2px solid #F7EFF7; padding: 15px; border-radius: 15px; background: #FDFAFA; }
+        .img-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 10px; }
+        .img-thumb { width: 100%; height: 70px; object-fit: cover; border-radius: 5px; }
+
+        /* NUEVAS ANIMACIONES PARA TODOS LOS TEXTOS */
+        .txt-anim-1 { animation: drift 3s infinite alternate; }
+        .txt-anim-2 { animation: bounceText 2s infinite; }
+        .txt-anim-3 { animation: rotateText 5s infinite linear; transform-origin: left; }
+        .txt-anim-4 { animation: shadowPulse 2s infinite alternate; }
+        .txt-anim-5 { animation: slideRightFade 2s infinite alternate; }
+        .txt-anim-6 { animation: blurText 3s infinite alternate; }
+        .txt-anim-7 { animation: scaleText 2s infinite alternate; }
+
+        /* ANIMACIONES EXISTENTES */
+        @keyframes growIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes drift { 0% { transform: translateX(0); } 100% { transform: translateX(10px); } }
+        @keyframes bounceText { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        @keyframes rotateText { 0% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } 100% { transform: rotate(0deg); } }
+        @keyframes shadowPulse { 0% { text-shadow: 0 0 0px #F2E4F2; } 100% { text-shadow: 0 0 10px #F2E4F2; } }
+        @keyframes slideRightFade { 0% { opacity: 0; transform: translateX(-20px); } 100% { opacity: 1; transform: translateX(0); } }
+        @keyframes blurText { 0% { filter: blur(0px); } 100% { filter: blur(2px); } }
+        @keyframes scaleText { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+
+        /* ANIMACIONES IMÁGENES */
+        .anim-9 { animation: heartBeat 1.5s ease-in-out infinite; }
+        .anim-11 { animation: swingImg 2s infinite; }
+        .anim-12 { animation: spinSlow 5s linear infinite; }
+        .anim-13 { animation: jumpImg 1s infinite; }
+        .anim-14 { animation: shadowPop 3s infinite alternate; }
+        .anim-16 { animation: shakeRotate 3s infinite; } 
+
+        @keyframes heartBeat { 0% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes swingImg { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+        @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes jumpImg { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes shadowPop { from { filter: brightness(1); } to { filter: brightness(1.3); } }
+        @keyframes shakeRotate { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-5deg); } 75% { transform: rotate(5deg); } }
+    </style>
+</head>
+<body>
+
+<div class="web-container">
+    <style="width: 100%; border-radius: 15px; margin-bottom: 10px;" class="anim-9">
+
+    <div class="search-bar">
+        <span class="txt-anim-1">🍥 Blog</span>
+        <strong class="txt-anim-2">SOY CLAUDIA CRUZ ( ˘͈ ᵕ ˘͈♡)</strong>
+        <div style="width: 30px; height: 30px; background: #FDFAFA; border-radius: 50%;"></div>
+    </div>
+
+    <div class="banner">
+        <h1 class="txt-anim-3">♡ Bienvenidos a mi página!! ♡</h1>
+        <p class="txt-anim-4">tengo 16 años | BTP INFO 2 | 27 junio, 2009.</p>
+    </div>
+
+    <div class="main-grid">
+        <div class="box">
+            <h3 class="txt-anim-5">✦  MIS FAVORITOS</h3>
+            <p class="txt-anim-6">Mi grupo, mi hobbie, mi animal y mi serie favorita.</p>
+            <div class="img-grid">
+                <img src="2.gif" class="img-thumb anim-11">
+                <img src="3.gif" class="img-thumb anim-12">
+                <img src="4.gif" class="img-thumb anim-13">
+                <img src="5.gif" class="img-thumb anim-14">
+            </div>
+        </div>
+
+        <div class="box">
+            <h3 class="txt-anim-7">✦  UN MENSAJE ESPECIAL</h3>
+            <div style="background: #FDFAFA; padding: 10px; margin-bottom: 5px;" class="txt-anim-1"><i>Que tengas un gran día :)</i></div>
+            <img src="6.gif" style="width: 50%; margin-top: 10px; border-radius: 10px;" class="anim-16">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
